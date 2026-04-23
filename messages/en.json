@@ -1,0 +1,60 @@
+{
+  "common": {
+    "appName": "BookMap",
+    "tagline": "Multi-vendor book marketplace",
+    "comingSoon": "Coming soon",
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Try again",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "search": "Search",
+    "noResults": "No results found",
+    "backToHome": "Back to home"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "toggleTheme": "Toggle theme"
+  },
+  "locale": {
+    "switchTo": "Switch to {locale}",
+    "en": "English",
+    "ar": "Arabic"
+  },
+  "nav": {
+    "home": "Home",
+    "dashboard": "Dashboard"
+  },
+  "errors": {
+    "notFound": "Page not found",
+    "notFoundDescription": "The page you are looking for does not exist.",
+    "sectionError": "This section encountered an error.",
+    "sectionErrorDescription": "The rest of the page is still working. Try refreshing this section."
+  },
+  "empty": {
+    "title": "Nothing here yet",
+    "description": "There is no content to display at this time."
+  },
+  "footer": {
+    "copyright": "© {year} BookMap"
+  },
+  "demo": {
+    "success": "Operation successful!",
+    "error": "Something went wrong!",
+    "warning": "Please be careful.",
+    "info": "Here is some information."
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome to BookMap dashboard"
+  },
+  "components": {
+    "title": "Component Showcase",
+    "description": "Visual reference for all shared UI components"
+  }
+}

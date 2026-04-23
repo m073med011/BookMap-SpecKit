@@ -1,0 +1,61 @@
+# dependencies
+node_modules/
+# .pnpm-store/
+# .pnpm-home/
+# .corepack/
+
+# # build output
+# .next/
+# out/
+# dist/
+# build/
+
+# # env files (keep .env.example)
+# .env
+# .env.local
+# .env.production
+# .env*.local
+
+# # IDE / editor
+# .vscode/
+# .idea/
+# *.swp
+# *.swo
+# *~
+
+# # OS files
+# Thumbs.db
+# Desktop.ini
+# .DS_Store
+
+# # debug / logs
+# npm-debug.log*
+# yarn-debug.log*
+# yarn-error.log*
+# pnpm-debug.log*
+# dev.err.log
+# dev.out.log
+
+# # testing
+# coverage/
+# test-results/
+# playwright-report/
+# blob-report/
+
+# # typescript
+# *.tsbuildinfo
+# next-env.d.ts
+
+# # Windows user profile artifacts (leaked into project)
+# .appdata/
+# .localappdata/
+# .bin/
+# AppData/
+# Microsoft/
+
+# # Claude Code / Speckit (local tooling)
+# .claude/
+# .specify/
+
+# # misc
+# *.pem

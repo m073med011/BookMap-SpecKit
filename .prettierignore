@@ -1,0 +1,11 @@
+node_modules
+.next
+dist
+pnpm-lock.yaml
+.claude
+.specify
+specs
+AGENTS.md
+command.md
+PLAN.md
+pnpm-workspace.yaml
