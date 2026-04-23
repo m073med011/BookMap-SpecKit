@@ -28,7 +28,14 @@
   },
   "nav": {
     "home": "Home",
-    "dashboard": "Dashboard"
+    "dashboard": "Dashboard",
+    "profile": "Profile",
+    "admin": "Admin",
+    "libraryManagement": "Library Management",
+    "signIn": "Sign in",
+    "signUp": "Sign up",
+    "profileSettings": "Profile settings",
+    "signOut": "Sign out"
   },
   "errors": {
     "notFound": "Page not found",
@@ -56,5 +63,133 @@
   "components": {
     "title": "Component Showcase",
     "description": "Visual reference for all shared UI components"
+  },
+  "auth": {
+    "signUp": {
+      "title": "Create your account",
+      "email": "Email address",
+      "password": "Password",
+      "submitButton": "Create account",
+      "googleButton": "Continue with Google",
+      "hasAccount": "Already have an account?",
+      "hasAccountLink": "Sign in",
+      "errors": {
+        "emailTaken": "An account with this email already exists.",
+        "weakPassword": "Choose a stronger password with uppercase, lowercase, and numbers.",
+        "rateLimited": "Too many attempts. Please wait a moment and try again.",
+        "unknown": "We couldn't create your account right now."
+      }
+    },
+    "signIn": {
+      "title": "Welcome back",
+      "email": "Email address",
+      "password": "Password",
+      "submitButton": "Sign in",
+      "googleButton": "Continue with Google",
+      "forgotPassword": "Forgot password?",
+      "noAccount": "Don't have an account?",
+      "noAccountLink": "Sign up",
+      "errors": {
+        "invalidCredentials": "The email or password is incorrect.",
+        "emailNotVerified": "Please verify your email before signing in.",
+        "accountSuspended": "This account has been suspended.",
+        "rateLimited": "Too many attempts. Please try again shortly."
+      }
+    },
+    "verifyEmail": {
+      "title": "Verify your email",
+      "otpLabel": "Verification code",
+      "submitButton": "Verify email",
+      "resendButton": "Resend code",
+      "resendCooldown": "Resend in {seconds}s",
+      "errors": {
+        "invalidToken": "The verification code is invalid.",
+        "expiredToken": "This verification code has expired."
+      },
+      "success": "Verification completed successfully."
+    },
+    "forgotPassword": {
+      "title": "Reset your password",
+      "email": "Email address",
+      "submitButton": "Send reset link",
+      "success": "If an account exists with this email, a reset link has been sent.",
+      "googleOnly": "Password reset is only available for email/password accounts."
+    },
+    "resetPassword": {
+      "title": "Create a new password",
+      "newPassword": "New password",
+      "confirmPassword": "Confirm password",
+      "submitButton": "Update password",
+      "errors": {
+        "invalidToken": "The reset link is invalid.",
+        "expiredToken": "The reset link has expired.",
+        "weakPassword": "Choose a stronger password.",
+        "mismatch": "Passwords do not match."
+      },
+      "success": "Your password has been updated."
+    },
+    "error": {
+      "title": "Authentication error",
+      "tryAgain": "Try again",
+      "emailAlternative": "Sign in with email and password",
+      "returnHome": "Return to home"
+    },
+    "passwordStrength": {
+      "weak": "Password strength: weak",
+      "medium": "Password strength: medium",
+      "strong": "Password strength: strong"
+    }
+  },
+  "profile": {
+    "settings": {
+      "title": "Profile settings",
+      "displayName": "Display name",
+      "bio": "Bio",
+      "bioCounter": "{count}/500 characters",
+      "preferredLocale": "Preferred language",
+      "saveButton": "Save changes",
+      "updateSuccess": "Your profile has been updated.",
+      "updateError": "We couldn't save your profile changes."
+    },
+    "avatar": {
+      "title": "Avatar",
+      "uploadButton": "Upload avatar",
+      "removeButton": "Remove avatar",
+      "uploading": "Uploading avatar...",
+      "errors": {
+        "tooLarge": "The selected file is larger than 5 MB.",
+        "invalidType": "Please choose a JPEG, PNG, or WebP image.",
+        "uploadFailed": "We couldn't upload your avatar."
+      },
+      "placeholder": "No avatar yet"
+    }
+  },
+  "invitations": {
+    "accept": {
+      "title": "Accept staff invitation",
+      "processing": "Processing your invitation...",
+      "success": "You have been added as staff to this library.",
+      "expired": "This invitation has expired.",
+      "invalid": "This invitation link is invalid.",
+      "alreadyAccepted": "This invitation has already been accepted.",
+      "goToDashboard": "Go to dashboard"
+    },
+    "send": {
+      "title": "Invite library staff",
+      "emailLabel": "Staff email address",
+      "submitButton": "Send invitation",
+      "success": "Invitation sent successfully.",
+      "errors": {
+        "alreadyStaff": "This user is already staff for the selected library.",
+        "alreadyInvited": "A pending invitation already exists for this email.",
+        "unauthorized": "You do not have permission to send invitations."
+      }
+    },
+    "revoke": {
+      "success": "Invitation revoked successfully.",
+      "errors": {
+        "notPending": "Only pending invitations can be revoked."
+      }
+    }
   }
 }

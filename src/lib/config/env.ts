@@ -1,3 +1,4 @@
+import "server-only";
 import { envSchema, type EnvConfig } from "@/schemas/env";
 
 export function validateEnv(): EnvConfig {
