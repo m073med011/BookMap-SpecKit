@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const envSchema = z.object({
+export const publicEnvSchema = z.object({
   NEXT_PUBLIC_SUPABASE_URL: z
     .string()
     .url({ message: "NEXT_PUBLIC_SUPABASE_URL must be a valid URL" }),
@@ -11,6 +11,9 @@ export const envSchema = z.object({
     .string()
     .url({ message: "NEXT_PUBLIC_SITE_URL must be a valid URL" })
     .default("http://localhost:3000"),
+});
+
+export const serverEnvSchema = publicEnvSchema.extend({
   SUPABASE_SERVICE_ROLE_KEY: z
     .string()
     .min(1, { message: "SUPABASE_SERVICE_ROLE_KEY is required" }),
@@ -20,4 +23,8 @@ export const envSchema = z.object({
     .optional(),
 });
 
-export type EnvConfig = z.infer<typeof envSchema>;
+export const envSchema = serverEnvSchema;
+
+export type PublicEnvConfig = z.infer<typeof publicEnvSchema>;
+export type ServerEnvConfig = z.infer<typeof serverEnvSchema>;
+export type EnvConfig = ServerEnvConfig;

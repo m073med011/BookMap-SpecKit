@@ -3,6 +3,7 @@ import { createServerClient } from "@supabase/ssr";
 import { createClient as createSupabaseClient, type SupabaseClient } from "@supabase/supabase-js";
 import { cookies } from "next/headers";
 import { env } from "@/lib/config/env";
+import { serverEnv } from "@/lib/config/env.server";
 import type { Database } from "@/types/supabase";
 
 export type AppSupabaseClient = SupabaseClient<Database>;
@@ -35,7 +36,7 @@ export async function createClient(): Promise<AppSupabaseClient> {
 export function createServiceRoleClient(): AppSupabaseClient {
   return createSupabaseClient<Database>(
     env.NEXT_PUBLIC_SUPABASE_URL,
-    env.SUPABASE_SERVICE_ROLE_KEY,
+    serverEnv.SUPABASE_SERVICE_ROLE_KEY,
     {
       auth: {
         autoRefreshToken: false,

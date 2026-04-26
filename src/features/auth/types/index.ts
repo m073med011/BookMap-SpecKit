@@ -26,7 +26,7 @@ export interface StaffInvitation {
   id: string;
   email: string;
   libraryId: string;
-  invitedBy: string;
+  invitedBy: string | null;
   status: InvitationStatus;
   expiresAt: string;
   createdAt: string;

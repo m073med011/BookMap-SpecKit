@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, Manrope } from "next/font/google";
-import "@/lib/config/env";
+import "@/lib/config/env.server";
 import "./globals.css";
 import "goey-toast/styles.css";
 

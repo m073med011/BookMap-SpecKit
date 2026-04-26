@@ -14,6 +14,10 @@ const themeIcons: Record<Theme, string> = {
   dark: "dark",
 };
 
+function subscribeToHydration() {
+  return () => {};
+}
+
 function SunIcon() {
   return (
     <svg
@@ -71,12 +75,16 @@ export function ThemeToggle() {
   const t = useTranslations("theme");
   const { resolvedTheme, setTheme, theme } = useTheme();
   const mounted = useSyncExternalStore(
-    () => () => undefined,
+    subscribeToHydration,
     () => true,
     () => false,
   );
 
   const currentTheme = (theme ?? "system") as Theme;
+  const resolvedThemeLabel =
+    resolvedTheme === "light" || resolvedTheme === "dark"
+      ? t(resolvedTheme)
+      : t("system");
 
   const handleToggle = () => {
     const currentIndex = themeOrder.indexOf(currentTheme);
@@ -111,7 +119,9 @@ export function ThemeToggle() {
       type="button"
     >
       <span className="sr-only">
-        {mounted ? t(currentTheme) : t("system")} / {resolvedTheme ?? "system"}
+        {mounted
+          ? `${t(currentTheme)} / ${resolvedThemeLabel}`
+          : t("toggleTheme")}
       </span>
       {renderIcon()}
     </button>

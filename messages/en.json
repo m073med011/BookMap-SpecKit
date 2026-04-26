@@ -31,6 +31,7 @@
     "dashboard": "Dashboard",
     "profile": "Profile",
     "admin": "Admin",
+    "myLibraries": "My Libraries",
     "libraryManagement": "Library Management",
     "signIn": "Sign in",
     "signUp": "Sign up",
@@ -190,6 +191,82 @@
       "errors": {
         "notPending": "Only pending invitations can be revoked."
       }
+    }
+  },
+  "libraries": {
+    "createLibrary": "Create library",
+    "editLibrary": "Edit library",
+    "libraryName": "Library name",
+    "librarySlug": "Library URL",
+    "slugPreview": "Slug preview",
+    "description": "Description",
+    "contactEmail": "Contact email",
+    "contactPhone": "Contact phone",
+    "address": "Address",
+    "languages": "Languages",
+    "logo": "Logo",
+    "banner": "Banner",
+    "uploadLogo": "Upload logo",
+    "uploadBanner": "Upload banner",
+    "saveDraft": "Save draft",
+    "savedDraft": "Draft saved successfully.",
+    "submitForReview": "Submit for review",
+    "submitted": "Library submitted for review.",
+    "pendingApproval": "Save your progress as a draft, then submit when everything looks ready.",
+    "step1Title": "Basic Info",
+    "step2Title": "Contact & Details",
+    "step3Title": "Review & Submit",
+    "next": "Next",
+    "back": "Back",
+    "slugTaken": "This library URL is already taken.",
+    "incompleteFields": "Please complete all required fields first.",
+    "resubmit": "Resubmit",
+    "rejectionReason": "Rejection reason",
+    "continueEditing": "Continue editing",
+    "status": {
+      "draft": "Draft",
+      "pending_approval": "Pending approval",
+      "active": "Active",
+      "suspended": "Suspended",
+      "rejected": "Rejected",
+      "archived": "Archived"
+    },
+    "validation": {
+      "nameRequired": "Library name is required.",
+      "nameMinLength": "Library name must be at least 2 characters.",
+      "nameTooLong": "Library name must be 200 characters or fewer.",
+      "invalidSlug": "Use lowercase letters, numbers, and hyphens only.",
+      "invalidEmail": "Enter a valid email address.",
+      "fileTooLarge": "Logo max 2 MB, banner max 5 MB.",
+      "invalidFileType": "Use JPEG, PNG, or WebP images."
+    },
+    "approvalQueue": {
+      "title": "Library Approval Queue",
+      "noLibraries": "No pending libraries to review.",
+      "approve": "Approve",
+      "reject": "Reject",
+      "rejectReason": "Rejection reason",
+      "rejectReasonPlaceholder": "Explain what needs to be changed before approval.",
+      "rejectReasonRequired": "A rejection reason is required.",
+      "approved": "Library approved successfully.",
+      "rejected": "Library rejected.",
+      "ownerSuspended": "Cannot approve because the owner account is suspended.",
+      "libraryName": "Library",
+      "owner": "Owner",
+      "submittedDate": "Submitted",
+      "actions": "Actions",
+      "confirmApprove": "Approve this library?",
+      "confirmReject": "Reject this library?"
+    },
+    "myLibraries": {
+      "title": "My Libraries",
+      "createNew": "Create New Library",
+      "manage": "Manage",
+      "noLibraries": "You have not created or joined any libraries yet.",
+      "noLibrariesDescription": "Create your first library to start onboarding it for review.",
+      "yourRole": "Your role",
+      "owner": "Owner",
+      "staff": "Staff"
     }
   }
 }

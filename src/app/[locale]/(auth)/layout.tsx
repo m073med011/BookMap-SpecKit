@@ -5,14 +5,15 @@ import type { Locale } from "@/types";
 
 type AuthLayoutProps = {
   children: ReactNode;
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 };
 
 export default async function AuthLayout({
   children,
   params,
 }: AuthLayoutProps) {
-  const { locale } = await params;
+  const { locale: requestedLocale } = await params;
+  const locale = requestedLocale as Locale;
   const t = await getTranslations({ locale, namespace: "common" });
 
   return (
