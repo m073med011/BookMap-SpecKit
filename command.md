@@ -12,13 +12,15 @@ create plan @PLAN.md on ai chat module
 
 specify 
  ##speckit-specify
-  Read @PLAN.md and create a specification for the phase ## Phase 0 — Foundation and Project Architectureand architecture page only
+  Read @PLAN.md and create a specification for the phase ## Phase 1 — Authentication, Authorization, Roles, and Profiles
+and architecture page only
 
 
 
-  /speckit-clarify ## Phase 0 — Foundation and Project Architecture
+  /speckit-clarify ## Phase 1 — Authentication, Authorization, Roles, and Profiles
 
-  /speckit-plan Phase 0 — Foundation and Project Architecture
+
+  /speckit-plan Phase ## Phase 1 — Authentication, Authorization, Roles, and Profiles
 
    /speckit-tasks create the tasks file so that a chaeaper llm model can implement without promplems
 

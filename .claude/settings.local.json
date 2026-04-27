@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(bash *)",
-      "Bash(powershell *)"
+      "Bash(powershell *)",
+      "WebSearch"
     ]
   }
 }
