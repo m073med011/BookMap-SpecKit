@@ -39,7 +39,11 @@ export async function requireRole(requiredRole: UserRole): Promise<void> {
       | undefined,
   );
 
-  if (!hasRole(roles, requiredRole)) {
+  const isAuthorized =
+    hasRole(roles, requiredRole) ||
+    (requiredRole === "admin" && hasRole(roles, "superadmin"));
+
+  if (!isAuthorized) {
     throw new Error("UNAUTHORIZED");
   }
 }
@@ -64,7 +68,54 @@ export async function requireLibraryStaff(libraryId: string): Promise<void> {
       | undefined,
   );
 
-  if (!hasRole(roles, "library_staff", libraryId)) {
+  if (hasRole(roles, "admin") || hasRole(roles, "superadmin")) {
+    return;
+  }
+
+  const { data: membership, error } = await supabase
+    .from("library_staff_memberships")
+    .select("id")
+    .eq("library_id", libraryId)
+    .eq("user_id", user.id)
+    .maybeSingle();
+
+  if (membership || hasRole(roles, "library_staff", libraryId)) {
+    return;
+  }
+
+  if (error || !membership) {
+    throw new Error("UNAUTHORIZED");
+  }
+}
+
+export async function requireLibraryOwner(libraryId: string): Promise<void> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  if (!user) {
+    throw new Error("UNAUTHORIZED");
+  }
+
+  const roles = normalizeRoles(
+    user.app_metadata?.roles as
+      | Array<{ libraryId?: string | null; library_id?: string | null; role: string }>
+      | undefined,
+  );
+
+  if (hasRole(roles, "admin") || hasRole(roles, "superadmin")) {
+    return;
+  }
+
+  const { data: membership, error } = await supabase
+    .from("library_staff_memberships")
+    .select("library_role")
+    .eq("library_id", libraryId)
+    .eq("user_id", user.id)
+    .maybeSingle();
+
+  if (error || !membership || membership.library_role !== "owner") {
     throw new Error("UNAUTHORIZED");
   }
 }

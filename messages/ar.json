@@ -31,6 +31,7 @@
     "dashboard": "لوحة التحكم",
     "profile": "الملف الشخصي",
     "admin": "الإدارة",
+    "myLibraries": "مكتباتي",
     "libraryManagement": "إدارة المكتبة",
     "signIn": "تسجيل الدخول",
     "signUp": "إنشاء حساب",
@@ -190,6 +191,82 @@
       "errors": {
         "notPending": "يمكن إلغاء الدعوات المعلقة فقط."
       }
+    }
+  },
+  "libraries": {
+    "createLibrary": "إنشاء مكتبة",
+    "editLibrary": "تعديل المكتبة",
+    "libraryName": "اسم المكتبة",
+    "librarySlug": "رابط المكتبة",
+    "slugPreview": "معاينة الرابط",
+    "description": "الوصف",
+    "contactEmail": "البريد الإلكتروني للتواصل",
+    "contactPhone": "رقم الهاتف",
+    "address": "العنوان",
+    "languages": "اللغات",
+    "logo": "الشعار",
+    "banner": "الغلاف",
+    "uploadLogo": "رفع الشعار",
+    "uploadBanner": "رفع الغلاف",
+    "saveDraft": "حفظ كمسودة",
+    "savedDraft": "تم حفظ المسودة بنجاح.",
+    "submitForReview": "إرسال للمراجعة",
+    "submitted": "تم إرسال المكتبة للمراجعة.",
+    "pendingApproval": "احفظ التقدم كمسودة ثم أرسل المكتبة عندما تصبح جاهزة للمراجعة.",
+    "step1Title": "المعلومات الأساسية",
+    "step2Title": "التواصل والتفاصيل",
+    "step3Title": "المراجعة والإرسال",
+    "next": "التالي",
+    "back": "السابق",
+    "slugTaken": "رابط المكتبة مستخدم بالفعل.",
+    "incompleteFields": "يرجى استكمال جميع الحقول المطلوبة أولاً.",
+    "resubmit": "إعادة الإرسال",
+    "rejectionReason": "سبب الرفض",
+    "continueEditing": "متابعة التعديل",
+    "status": {
+      "draft": "مسودة",
+      "pending_approval": "بانتظار الموافقة",
+      "active": "نشطة",
+      "suspended": "معلقة",
+      "rejected": "مرفوضة",
+      "archived": "مؤرشفة"
+    },
+    "validation": {
+      "nameRequired": "اسم المكتبة مطلوب.",
+      "nameMinLength": "يجب أن يتكون اسم المكتبة من حرفين على الأقل.",
+      "nameTooLong": "يجب ألا يزيد اسم المكتبة عن 200 حرف.",
+      "invalidSlug": "استخدم أحرفًا صغيرة وأرقامًا وشرطات فقط.",
+      "invalidEmail": "أدخل بريدًا إلكترونيًا صالحًا.",
+      "fileTooLarge": "الحد الأقصى للشعار 2 ميجابايت وللغلاف 5 ميجابايت.",
+      "invalidFileType": "استخدم صور JPEG أو PNG أو WebP."
+    },
+    "approvalQueue": {
+      "title": "قائمة مراجعة طلبات المكتبات",
+      "noLibraries": "لا توجد مكتبات معلقة للمراجعة.",
+      "approve": "موافقة",
+      "reject": "رفض",
+      "rejectReason": "سبب الرفض",
+      "rejectReasonPlaceholder": "اشرح ما الذي يجب تعديله قبل الموافقة.",
+      "rejectReasonRequired": "سبب الرفض مطلوب.",
+      "approved": "تمت الموافقة على المكتبة بنجاح.",
+      "rejected": "تم رفض المكتبة.",
+      "ownerSuspended": "لا يمكن الموافقة لأن حساب مالك المكتبة موقوف.",
+      "libraryName": "المكتبة",
+      "owner": "المالك",
+      "submittedDate": "تاريخ الإرسال",
+      "actions": "الإجراءات",
+      "confirmApprove": "هل تريد الموافقة على هذه المكتبة؟",
+      "confirmReject": "هل تريد رفض هذه المكتبة؟"
+    },
+    "myLibraries": {
+      "title": "مكتباتي",
+      "createNew": "إنشاء مكتبة جديدة",
+      "manage": "إدارة",
+      "noLibraries": "لم تقم بإنشاء أي مكتبات أو الانضمام إليها بعد.",
+      "noLibrariesDescription": "أنشئ مكتبتك الأولى لبدء تجهيزها وإرسالها للمراجعة.",
+      "yourRole": "دورك",
+      "owner": "مالك",
+      "staff": "موظف"
     }
   }
 }
