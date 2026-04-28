@@ -8,7 +8,15 @@ export type Json =
 
 export type Database = {
   public: {
-    Enums: Record<string, never>;
+    Enums: {
+      catalog_listing_format_type: "ebook" | "physical";
+      catalog_listing_status:
+        | "archived"
+        | "draft"
+        | "pending_review"
+        | "published"
+        | "unpublished";
+    };
     Functions: {
       authorize: {
         Args: { required_role: string };
@@ -84,6 +92,153 @@ export type Database = {
           target_id?: string | null;
           target_type?: string | null;
           user_id?: string | null;
+        };
+      };
+      authors: {
+        Insert: {
+          created_at?: string;
+          id?: string;
+          name: string;
+          updated_at?: string;
+        };
+        Relationships: [];
+        Row: {
+          created_at: string;
+          id: string;
+          name: string;
+          updated_at: string;
+        };
+        Update: {
+          created_at?: string;
+          id?: string;
+          name?: string;
+          updated_at?: string;
+        };
+      };
+      book_authors: {
+        Insert: {
+          author_id: string;
+          book_id: string;
+          created_at?: string;
+        };
+        Relationships: [];
+        Row: {
+          author_id: string;
+          book_id: string;
+          created_at: string;
+        };
+        Update: {
+          author_id?: string;
+          book_id?: string;
+          created_at?: string;
+        };
+      };
+      book_genres: {
+        Insert: {
+          book_id: string;
+          created_at?: string;
+          genre_id: string;
+        };
+        Relationships: [];
+        Row: {
+          book_id: string;
+          created_at: string;
+          genre_id: string;
+        };
+        Update: {
+          book_id?: string;
+          created_at?: string;
+          genre_id?: string;
+        };
+      };
+      books: {
+        Insert: {
+          cover_image_path?: string | null;
+          created_at?: string;
+          id?: string;
+          isbn?: string | null;
+          language: string;
+          library_id: string;
+          publication_year?: number | null;
+          publisher_id?: string | null;
+          subtitle?: string | null;
+          title: string;
+          updated_at?: string;
+        };
+        Relationships: [];
+        Row: {
+          cover_image_path: string | null;
+          created_at: string;
+          id: string;
+          isbn: string | null;
+          language: string;
+          library_id: string;
+          publication_year: number | null;
+          publisher_id: string | null;
+          subtitle: string | null;
+          title: string;
+          updated_at: string;
+        };
+        Update: {
+          cover_image_path?: string | null;
+          created_at?: string;
+          id?: string;
+          isbn?: string | null;
+          language?: string;
+          library_id?: string;
+          publication_year?: number | null;
+          publisher_id?: string | null;
+          subtitle?: string | null;
+          title?: string;
+          updated_at?: string;
+        };
+      };
+      genres: {
+        Insert: {
+          created_at?: string;
+          id?: string;
+          name: string;
+          parent_id?: string | null;
+          updated_at?: string;
+        };
+        Relationships: [];
+        Row: {
+          created_at: string;
+          id: string;
+          name: string;
+          parent_id: string | null;
+          updated_at: string;
+        };
+        Update: {
+          created_at?: string;
+          id?: string;
+          name?: string;
+          parent_id?: string | null;
+          updated_at?: string;
+        };
+      };
+      inventory: {
+        Insert: {
+          created_at?: string;
+          id?: string;
+          listing_format_id: string;
+          stock_quantity?: number;
+          updated_at?: string;
+        };
+        Relationships: [];
+        Row: {
+          created_at: string;
+          id: string;
+          listing_format_id: string;
+          stock_quantity: number;
+          updated_at: string;
+        };
+        Update: {
+          created_at?: string;
+          id?: string;
+          listing_format_id?: string;
+          stock_quantity?: number;
+          updated_at?: string;
         };
       };
       libraries: {
@@ -259,6 +414,102 @@ export type Database = {
           new_status?: string;
           previous_status?: string | null;
           reason?: string | null;
+        };
+      };
+      listing_formats: {
+        Insert: {
+          created_at?: string;
+          ebook_file_path?: string | null;
+          format_type: "ebook" | "physical";
+          id?: string;
+          listing_id: string;
+          price: number;
+          updated_at?: string;
+        };
+        Relationships: [];
+        Row: {
+          created_at: string;
+          ebook_file_path: string | null;
+          format_type: "ebook" | "physical";
+          id: string;
+          listing_id: string;
+          price: number;
+          updated_at: string;
+        };
+        Update: {
+          created_at?: string;
+          ebook_file_path?: string | null;
+          format_type?: "ebook" | "physical";
+          id?: string;
+          listing_id?: string;
+          price?: number;
+          updated_at?: string;
+        };
+      };
+      listings: {
+        Insert: {
+          approval_required?: boolean;
+          book_id: string;
+          created_at?: string;
+          id?: string;
+          library_id: string;
+          status?:
+            | "archived"
+            | "draft"
+            | "pending_review"
+            | "published"
+            | "unpublished";
+          updated_at?: string;
+        };
+        Relationships: [];
+        Row: {
+          approval_required: boolean;
+          book_id: string;
+          created_at: string;
+          id: string;
+          library_id: string;
+          status:
+            | "archived"
+            | "draft"
+            | "pending_review"
+            | "published"
+            | "unpublished";
+          updated_at: string;
+        };
+        Update: {
+          approval_required?: boolean;
+          book_id?: string;
+          created_at?: string;
+          id?: string;
+          library_id?: string;
+          status?:
+            | "archived"
+            | "draft"
+            | "pending_review"
+            | "published"
+            | "unpublished";
+          updated_at?: string;
+        };
+      };
+      publishers: {
+        Insert: {
+          created_at?: string;
+          id?: string;
+          name: string;
+          updated_at?: string;
+        };
+        Relationships: [];
+        Row: {
+          created_at: string;
+          id: string;
+          name: string;
+          updated_at: string;
+        };
+        Update: {
+          created_at?: string;
+          id?: string;
+          name?: string;
+          updated_at?: string;
         };
       };
       profiles: {

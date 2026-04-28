@@ -6,6 +6,9 @@ create plan @PLAN.md on ai chat module
 ------------
  this is multi vendor book ecommerce what will implement following this plan @PLAN.md the implement must follow best practice for best arch ,clean code ,oop ,sold princpails ,best design system,system design and safe types and good secure system  
 =================================================
+***************************************************
+***************************************************
+***************************************************
 ------------
  ##speckit-specify
 ------------

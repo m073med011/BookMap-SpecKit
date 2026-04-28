@@ -1,0 +1,21 @@
+{
+  "integration": "agy-sidecar",
+  "version": "0.7.4.dev0",
+  "installed_at": "2026-04-27T08:43:23.943576+00:00",
+  "files": {
+    ".agent/skills/speckit-analyze/SKILL.md": "4eef6fb1c5600ce88334173b5dfcb93ee115b57902dcdce1ff39e0257fdd0ac2",
+    ".agent/skills/speckit-checklist/SKILL.md": "4c480fdf6f5b694238fd2ef59ec4cf477039c15eb612faea838b7ca46e8dbfb4",
+    ".agent/skills/speckit-clarify/SKILL.md": "c0edc7886fe5bfb0db81b593328cd59ed5a8cb4b24f397df3d60247fc0881da9",
+    ".agent/skills/speckit-constitution/SKILL.md": "ef7a9114c9a1bb2e92ce0535031b150aeedf15aef749f85392fa2a4c613d50dc",
+    ".agent/skills/speckit-implement/SKILL.md": "e925fb2cd2606d01e88395775f1475f9426404ded7cdcfd549e50bddbd0e8b41",
+    ".agent/skills/speckit-plan/SKILL.md": "376a9cbcac184444046fb4521b28439d1a5c9b2e5ddfea6daac4f571c185f127",
+    ".agent/skills/speckit-specify/SKILL.md": "032312bf4273cd2a0b27bbad9cf74b81c951cd03e463dec16af17c513daf0660",
+    ".agent/skills/speckit-tasks/SKILL.md": "9b9a14bc950bdcc1573892605bc65b60acf7f985a71579af23be436891b29c57",
+    ".agent/skills/speckit-taskstoissues/SKILL.md": "0a0dd4a1384c33a1c83a5119b4fc2f6171a4c2570305561dae2a0f5fbc24bb29",
+    ".agent/skills/speckit-git-commit/SKILL.md": "fab6a52d31dbc33eac110d92b6a8d447fccfb0a898c3e5a83bba38862f6b214b",
+    ".agent/skills/speckit-git-feature/SKILL.md": "4601c4b96084d35a6e9cdcc436797304a57c150975b03c1998d3f57a4777d909",
+    ".agent/skills/speckit-git-initialize/SKILL.md": "3bf8a47922c2151d54fe8728f2c310dd8945342d63e5c271dab6b307d7cfd86a",
+    ".agent/skills/speckit-git-remote/SKILL.md": "33fb41c858ba2bbcc2b55f65cf231a7ca0e0518e94d93a91620afdb19218629a",
+    ".agent/skills/speckit-git-validate/SKILL.md": "69e3a118cd51b935eeb721564e1905c7dd95db6f3930882541af276d21c3adac"
+  }
+}

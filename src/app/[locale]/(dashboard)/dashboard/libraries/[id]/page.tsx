@@ -66,6 +66,11 @@ export default async function LibraryOverviewPage({
               </Link>
             </Button>
             <Button asChild size="sm" variant="outline">
+              <Link href={`/dashboard/library/${library.id}/catalog`}>
+                Catalog
+              </Link>
+            </Button>
+            <Button asChild size="sm" variant="outline">
               <Link href={`/dashboard/libraries/${library.id}/staff`}>
                 Staff
               </Link>

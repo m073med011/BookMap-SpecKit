@@ -1,6 +1,12 @@
 node_modules
 .next
 dist
+build
+coverage
+playwright-report
+test-results
+package-lock.json
+yarn.lock
 pnpm-lock.yaml
 .claude
 .specify

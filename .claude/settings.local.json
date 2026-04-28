@@ -1,9 +1,16 @@
 {
+  "env": {
+    "ANTHROPIC_BASE_URL": "https://api.ecomagent.in/",
+    "ANTHROPIC_AUTH_TOKEN": "sk-95e73d5e99b81f8ef0fa7c341a0061826823cbf59c97462b",
+    "ANTHROPIC_MODEL": "claude-opus-4.6",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-4-6",
+    "ANTHROPIC_SMALL_FAST_MODEL": "claude-opus-4.6",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-opus-4.6",
+    "DISABLE_NON_ESSENTIAL_MODEL_CALLS": "1",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "CLAUDE_CODE_ATTRIBUTION_HEADER": "0"
+  },
   "permissions": {
-    "allow": [
-      "Bash(bash *)",
-      "Bash(powershell *)",
-      "WebSearch"
-    ]
+    "deny": ["WebSearch"]
   }
 }
